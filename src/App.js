@@ -6,9 +6,7 @@ import CommonWords from './components/CommonWords';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <CommonWords />
-      </header>
+      <CommonWords />
     </div>
   );
 }

@@ -1,4 +1,5 @@
-const words = "/time|person|year|way|day|thing|man|world|life|hand|part|child|eye|woman|place|work|week|case|point|government|company|number|group|problem|fact|be|have|do|say|get|make|go|know|take|see|come|think|look|want|give|use|find|tell|ask|work|seem|feel|try|leave|call|good|new|first|last|long|great|little|own|other|old|right|big|high|different|small|large|next|early|young|important|few|public|bad|same|able|to|of|in|for|on|with|at|by|from|up|about|into|over|after|the|and|a|that|I|it|not|he|as|you|this|but|his|they|her|she|or|an|will|my|one|all|would|there|their|so|if|most|no|were|most|like|out|those|keep|well|every|which|who|just|how|is|an|-/g";
+const words =
+  '/time|person|year|way|day|thing|man|world|life|hand|part|child|eye|woman|place|work|week|case|point|government|company|number|group|problem|fact|be|have|do|say|get|make|go|know|take|see|come|think|look|want|give|use|find|tell|ask|work|seem|feel|try|leave|call|good|new|first|last|long|great|little|own|other|old|right|big|high|different|small|large|next|early|young|important|few|public|bad|same|able|to|of|in|for|on|with|at|by|from|up|about|into|over|after|the|and|a|that|I|it|not|he|as|you|this|but|his|they|her|she|or|an|will|my|one|all|would|there|their|so|if|most|no|were|most|like|out|those|keep|well|every|which|who|just|how|is|an|-/g';
 const data = {
   facebook: {
     name: 'facebook',
@@ -848,10 +849,10 @@ const over10Values = [];
 valueHashKeys.forEach(key => {
   const value = valuesHash[key];
   if (key.match(words) || key === '' || !isNaN(Number(key))) {
-    delete valuesHash[key]
+    delete valuesHash[key];
   } else if (value > 10) {
-    delete valuesHash[key]
-    over10Values.push({key: value});
+    delete valuesHash[key];
+    over10Values.push({ key: value });
   }
 });
 
@@ -869,17 +870,17 @@ keys.forEach(key => {
   });
 });
 
-const keysLabels = Object.keys(keysHash);
-const keysData = Object.values(keysHash);
+let keysLabels = Object.keys(keysHash);
+let keysData = Object.values(keysHash);
 
 const over10Keys = [];
 valueHashKeys.forEach(key => {
   const value = keysHash[key];
   if (key.match(words) || key === '' || !isNaN(Number(key))) {
-    delete keysHash[key]
+    delete keysHash[key];
   } else if (value > 10) {
-    delete keysHash[key]
-    over10Keys.push({key: value});
+    delete keysHash[key];
+    over10Keys.push({ key: value });
   }
 });
 
@@ -889,5 +890,5 @@ export default {
   over10Values,
   keysLabels,
   keysData,
-  over10Keys,
+  over10Keys
 };
